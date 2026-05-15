@@ -1,9 +1,9 @@
 const Home = () => {
   return (
     <>
-      <h1>Pagina del Gym</h1>
+      <h1>Pagina si del Gym</h1>
 
-      
+
     </>
   );
 };
