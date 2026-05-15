@@ -1,9 +1,12 @@
-import { supabase } from "./lib/supabase";
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
 
 function App() {
-  console.log(supabase);
-
-  return <h1>Gym App</h1>;
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  )
 }
 
-export default App;
+export default App
