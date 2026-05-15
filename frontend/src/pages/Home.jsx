@@ -6,8 +6,8 @@ const Home = () => {
     <>
         <Header />
 
-      <h1>Pagina si del Gym</h1>
-      
+      <h1> Pagina si del Gym</h1>
+
         <Footer />
 
     </>
