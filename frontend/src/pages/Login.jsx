@@ -1,4 +1,5 @@
 import "../styles/Login.css";
+import { Link } from 'react-router-dom'
 
 function Login() {
   return (
@@ -18,7 +19,7 @@ function Login() {
           <input type="email" placeholder="usuario@ejemplo.com" />
           <h2>Contraseña</h2>
           <input type="password" placeholder="••••••••" />
-           <div className="loginActions">
+          <div className="loginActions">
             <label className="rememberMe">
               <input type="checkbox" />
               Recordar Cuenta
@@ -31,7 +32,7 @@ function Login() {
 
           <div className="loginRegisterLink">
             <span>
-              ¿No tienes una cuenta? <a href="Register">Regístrate ahora</a>
+              ¿No tienes una cuenta? <Link to="/Register">Regístrate ahora</Link>
             </span>
           </div>
         </form>

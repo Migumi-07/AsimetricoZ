@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root {
+  --accent-color: #ccff00; /* Verde Neón */
+  --bg-dark: #121212;
+  --input-bg: #1e1e1e;
+  --text-gray: #8a8a8a;
+}
+
+.registerContainer {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-dark);
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+/* --- SECCIÓN IZQUIERDA --- */
+.registerImage {
+  flex: 1;
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop'); /* Imagen de gym */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px;
+}
+
+.registerImage .overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2));
+}
+
+.brandContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.brandContent h1 {
+  font-size: 80px;
+  color: var(--accent-color);
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.mainMotto h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+
+.statItem p {
+  font-size: 12px;
+  color: var(--text-gray);
+  margin: 5px 0 0 0;
+  font-weight: 600;
+}
+
+/* --- SECCIÓN DERECHA --- */
+.registerForm {
+  flex: 0.8;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.registerWelcome h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.registerWelcome p {
+  color: var(--text-gray);
+  margin-bottom: 30px;
+}
+
+/* Botones Sociales */
+.socialActions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.socialBtn {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #333;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.socialBtn img { width: 20px; }
+
+.divider {
+  text-align: center;
+  border-bottom: 1px solid #333;
+  line-height: 0.1em;
+  margin: 20px 0 30px;
+}
+
+.divider span {
+  background: var(--bg-dark);
+  padding: 0 15px;
+  color: var(--text-gray);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Formulario */
+.registerForm form h2 {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.registerForm input[type="text"],
+.registerForm input[type="email"],
+.registerForm input[type="password"] {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid #333;
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+/* Selector de Rol */
+.roleSelector {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.roleOption {
+  flex: 1;
+  background: var(--input-bg);
+  border: 1px solid #333;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.roleOption.active {
+  border-color: var(--accent-color);
+  background: rgba(204, 255, 0, 0.05);
+}
+
+.roleOption.active .icon {
+  filter: drop-shadow(0 0 5px var(--accent-color));
+}
+
+/* Botón Registro */
+.submitBtn {
+  width: 100%;
+  background-color: var(--accent-color) !important;
+  color: black !important;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: none;
+  padding: 18px !important;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.termsActions {
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+.termsActions span {
+  color: white;
+  text-decoration: underline;
+}
+
+.registerRegisterLink {
+  margin-top: 25px;
+  text-align: center;
+  color: var(--text-gray);
+}
+
+.registerRegisterLink a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .registerImage { display: none; }
+  .registerForm { flex: 1; padding: 40px; }
+}
